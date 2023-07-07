@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS |
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>This is an EJS</h1>
+        <%- include('./partials/nav.ejs') %>
+            <div>
+                <h1>Blogs</h1>
+                <% if(blogs.length> 0){ %>
+                    <% blogs.forEach(blog=> { %>
+                        <h3>
+                            <%= blog.title %>
+                        </h3>
+                        <p>
+                            <%= blog.description %>
+                        </p>
+                        <% })%>
+                            <% }else{%>
+                                <p>There are no blogs to display</p>
+                                <% } %>
+            </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

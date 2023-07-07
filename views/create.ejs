@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS |
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>Create page</h1>
+        <%- include('./partials/nav.ejs') %>
+
+            <form action="/blogs" method="POST">
+                <label for="url">URL:</label>
+                <input id="url" type="text" name="url" placeholder="Enter the URL...">
+                <button>Submit</button>
+            </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
